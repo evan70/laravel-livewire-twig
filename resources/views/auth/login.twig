@@ -1,14 +1,8 @@
-{#{% extends "layouts/app.twig" %}#}
 {% extends "layouts/panel.twig" %}
 
-{% set title = __('Home') %}
+{% set title = __('Login') %}
 
 {% block content %}
-    Home Index!
-
-{# The Twig version of '@livewire' #}
-{% livewire.component 'Counter' %}
-
     <form method="post" action="{{ route('login.action') }}">
         {{ csrf_field() }}
 
@@ -26,6 +20,4 @@
             </a>
         </div>
     </form>
-
-
 {% endblock %}
